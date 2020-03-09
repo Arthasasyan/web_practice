@@ -1,0 +1,144 @@
+<html>
+<head>
+    <style>
+        body {
+            background: #343434;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loader {
+            width: 100px;
+            height: 100px;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+        }
+
+        .loader_text {
+            font-family: sans-serif;
+            font-size: 10px;
+            color: #fafafa;
+            animation: 3s ease-in-out infinite textZoomInOut;
+        }
+
+        .loader_round {
+            width: 5px;
+            height: 5px;
+            border-radius: 50%;
+            position: absolute;
+            background: #ccc;
+        }
+
+        .round1 {
+            animation: 3s ease-in-out infinite moveround1;
+            left: 0px;
+            top: 0px;
+        }
+
+        .round2 {
+            animation: 3s ease-in-out infinite moveround2;
+            left: calc(100% - 5px);
+            top: 0px;
+        }
+
+        .round3 {
+            animation: 3s ease-in-out infinite moveround3;
+            left: calc(100% - 5px);
+            top: calc(100% - 5px);
+        }
+
+        .round4 {
+            animation: 3s ease-in-out infinite moveround4;
+            left: 0px;
+            top: calc(100% - 5px);
+        }
+
+        @keyframes moveround1 {
+
+            25% {
+                transform: translateX(2000%);
+            }
+
+            50% {
+                transform: translate(2000%, 2000%);
+            }
+
+            75% {
+                transform: translateY(2000%);
+            }
+        }
+
+        @keyframes moveround2 {
+
+            25% {
+                transform: translateY(2000%);
+            }
+
+            50% {
+                transform: translate(-2000%, 2000%);
+            }
+
+            75% {
+                transform: translateX(-2000%);
+            }
+        }
+
+        @keyframes moveround3 {
+
+            25% {
+                transform: translateX(-2000%);
+            }
+
+            50% {
+                transform: translate(-2000%, -2000%);
+            }
+
+            75% {
+                transform: translateY(-2000%);
+            }
+        }
+
+        @keyframes moveround4 {
+
+            25% {
+                transform: translateY(-2000%);
+            }
+
+            50% {
+                transform: translate(2000%, -2000%);
+            }
+
+            75% {
+                transform: translateX(2000%);
+            }
+        }
+
+        @keyframes textZoomInOut {
+
+            25% {
+                transform: scale(1.7);
+            }
+
+            50% {
+                transform: scale(1);
+            }
+
+            75% {
+                transform: scale(1.7);
+            }
+        }
+    </style>
+</head>
+<body>
+<div class="loader">
+    <span class="loader_text">LOADING</span>
+    <div class="loader_round round1"></div>
+    <div class="loader_round round2"></div>
+    <div class="loader_round round3"></div>
+    <div class="loader_round round4"></div>
+</div>
+</body>
+</html>
