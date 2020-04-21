@@ -1,5 +1,4 @@
-export default function fillWithUserData() {
-    let elem = document.getElementById("app");
-    elem.innerHTML = "<p>Alexander Kostyurenko M3307</p>" +
-        "<p>Professional designer</p>"
+export default function userData() {
+    return `<span>Alexander Kostyurenko M3307<br></span>
+        <span>Professional designer</span>`
 }
